@@ -1,0 +1,24 @@
+<div class="container">
+	<h3>New Product Creation</h3>
+	<form (submit)="create()" #formData="ngForm">
+		<label>
+			Name:
+			<input type="text" [(ngModel)]="newProduct.name" name="name" required #name="ngModel">
+		</label>
+		<label>
+			Description:
+			<input type="text" [(ngModel)]="newProduct.description" name="description" required #description="ngModel">
+		</label>
+		<label>
+			Price:
+			<input type="number" [(ngModel)]="newProduct.price" name="price">
+		</label>
+		<label>
+			Quantity:
+			<input type="number" [(ngModel)]="newProduct.quantity" name="quantity">
+		</label>
+		<input type="submit">
+	</form>
+</div>
+<!--{{ formData | json }}-->
+<!--{{ name.errors | json }}-->
